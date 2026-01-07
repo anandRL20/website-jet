@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JET Customs - Professional Development</title>
+    <title>JETT Studios - Professional Video Editing & Thumbnails</title>
     
     <!-- Open Graph / Discord Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jet-customs.netlify.app/">
-    <meta property="og:title" content="JET Customs - Professional Development">
-    <meta property="og:description" content="Elevate your FiveM and SA-MP experience with custom skins, vehicles, and cinematic scenes. Professionally developed and performance-optimized.">
-    <meta property="og:image" content="https://jet-customs.netlify.app/preview.png">
-    <meta property="og:site_name" content="JET Customs Studio">
+    <meta property="og:url" content="https://jett-studios.netlify.app/">
+    <meta property="og:title" content="JETT Studios - Professional Video Editing & Thumbnails">
+    <meta property="og:description" content="Connecting skilled editors with clients. High-quality VFX, GFX, and editing services for content creators and brands.">
+    <meta property="og:image" content="https://jett-studios.netlify.app/preview.png">
+    <meta property="og:site_name" content="JETT Studios">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://jet-customs.netlify.app/">
-    <meta name="twitter:title" content="JET Customs - Professional Development">
-    <meta name="twitter:description" content="Elevate your FiveM and SA-MP experience with custom skins, vehicles, and cinematic scenes. Professionally developed and performance-optimized.">
-    <meta name="twitter:image" content="https://jet-customs.netlify.app/preview.png">
+    <meta name="twitter:url" content="https://jett-studios.netlify.app/">
+    <meta name="twitter:title" content="JETT Studios - Professional Video Editing & Thumbnails">
+    <meta name="twitter:description" content="Connecting skilled editors with clients. High-quality VFX, GFX, and editing services for content creators and brands.">
+    <meta name="twitter:image" content="https://jett-studios.netlify.app/preview.png">
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#00d4ff">
@@ -44,19 +44,25 @@
             justify-content: center;
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(180deg, #0a0e1a 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #0a0e1a 0%, #0f1729 50%, #0a0e1a 100%);
             position: relative;
+            overflow: hidden;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
-            pointer-events: none;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
         }
 
         nav {
@@ -64,14 +70,25 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1.5rem 3rem;
+            padding: 1rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: rgba(10, 14, 26, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
         }
 
         .logo {
@@ -81,7 +98,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: 0.5px;
+            letter-spacing: 2px;
         }
 
         .nav-links {
@@ -92,10 +109,11 @@
         }
 
         .nav-links a {
-            color: #b9bbbe;
+            color: #b0b0b0;
             text-decoration: none;
             font-size: 0.95rem;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: all 0.3s;
         }
 
         .nav-links a:hover {
@@ -103,116 +121,170 @@
         }
 
         .discord-btn-nav {
-            background: #5865f2;
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            font-weight: 600;
+            background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
+            color: #0a0e1a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
             transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
         }
 
         .discord-btn-nav:hover {
-            background: #4752c4;
             transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5);
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 1000px;
             position: relative;
             z-index: 1;
             margin-top: 80px;
         }
 
+        .hero-logo {
+            width: 500px;
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 3rem;
+            filter: drop-shadow(0 10px 30px rgba(0, 212, 255, 0.3));
+            animation: fadeInUp 0.8s ease-out;
+        }
+
         h1 {
-            font-size: 4rem;
-            font-weight: 800;
+            font-size: 4.5rem;
+            font-weight: 900;
             margin-bottom: 1.5rem;
             line-height: 1.1;
-            background: linear-gradient(135deg, #00d4ff 0%, #fff 100%);
+            background: linear-gradient(135deg, #fff 0%, #00d4ff 50%, #00a8ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .subtitle {
-            font-size: 1.3rem;
-            color: #b9bbbe;
+            font-size: 1.4rem;
+            color: #b0b0b0;
             margin-bottom: 3rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-highlight {
+            color: #00d4ff;
+            font-weight: 600;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
             color: #0a0e1a;
-            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(0, 212, 255, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.6);
         }
 
         .btn-secondary {
             background: rgba(0, 212, 255, 0.05);
             color: #fff;
-            border: 1px solid rgba(0, 212, 255, 0.2);
+            border: 2px solid rgba(0, 212, 255, 0.3);
         }
 
         .btn-secondary:hover {
             background: rgba(0, 212, 255, 0.1);
-            border-color: rgba(0, 212, 255, 0.4);
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-3px);
         }
 
         .services {
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             background: #0a0e1a;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
         }
 
         .services-container {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #808080;
+            margin-bottom: 4rem;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .service-card {
-            background: rgba(0, 212, 255, 0.03);
-            border: 1px solid rgba(0, 212, 255, 0.1);
-            border-radius: 12px;
-            padding: 2.5rem;
-            transition: all 0.3s;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 168, 255, 0.02) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
@@ -223,10 +295,10 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 5px;
             background: linear-gradient(90deg, #00d4ff 0%, #00a8ff 100%);
             transform: scaleX(0);
-            transition: transform 0.3s;
+            transition: transform 0.4s;
         }
 
         .service-card:hover::before {
@@ -234,44 +306,49 @@
         }
 
         .service-card:hover {
-            background: rgba(0, 212, 255, 0.05);
-            border-color: rgba(0, 212, 255, 0.3);
-            transform: translateY(-4px);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 168, 255, 0.05) 100%);
+            border-color: rgba(0, 212, 255, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
-            border-radius: 12px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .service-card p {
-            color: #b9bbbe;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
         }
 
         .service-features {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .service-features li {
-            color: #b9bbbe;
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+            color: #d0d0d0;
+            padding: 0.7rem 0;
+            padding-left: 2rem;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .service-features li::before {
@@ -280,11 +357,55 @@
             left: 0;
             color: #00d4ff;
             font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stats {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #0f1729 0%, #0a0e1a 100%);
+            position: relative;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.8rem;
+        }
+
+        .stat-item p {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         .portfolio {
-            padding: 6rem 2rem;
-            background: linear-gradient(180deg, #0a0e1a 0%, #0f172a 100%);
+            padding: 8rem 2rem;
+            background: #0a0e1a;
         }
 
         .portfolio-container {
@@ -292,85 +413,84 @@
             margin: 0 auto;
         }
 
-        .stats {
-            padding: 4rem 2rem;
-            background: #0a0e1a;
-        }
-
-        .stats-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .stat-item h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: #b9bbbe;
-            font-size: 1.1rem;
-        }
-
         .cta-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 50%, #00d4ff 100%);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
             color: #0a0e1a;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
             color: rgba(10, 14, 26, 0.8);
+            position: relative;
+            z-index: 1;
         }
 
         .btn-discord {
-            background: #5865f2;
-            color: #fff;
-            padding: 1.2rem 3rem;
-            border-radius: 8px;
-            font-weight: 700;
+            background: #0a0e1a;
+            color: #00d4ff;
+            padding: 1.3rem 3.5rem;
+            border-radius: 50px;
+            font-weight: 800;
             font-size: 1.1rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
             transition: all 0.3s;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
         }
 
         .btn-discord:hover {
-            background: #4752c4;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
         }
 
         footer {
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            background: #0a0e1a;
+            background: #080b15;
             border-top: 1px solid rgba(0, 212, 255, 0.1);
-            color: #b9bbbe;
+            color: #808080;
         }
 
         @media (max-width: 768px) {
+            .hero-logo {
+                width: 350px;
+            }
+
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .subtitle {
@@ -379,6 +499,10 @@
 
             nav {
                 padding: 1rem 1.5rem;
+            }
+
+            .logo-img {
+                height: 35px;
             }
 
             .logo {
@@ -396,27 +520,44 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">JET</div>
+        <div class="logo-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300a8ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='10' y='60' font-family='Arial, sans-serif' font-size='50' font-weight='800' fill='url(%23grad)' style='font-style: italic;'%3EJETT%3C/text%3E%3Cpath d='M 20 70 Q 80 65 140 70' stroke='url(%23grad)' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="JETT Logo" class="logo-img">
+        </div>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#why-us">Why Us</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://discord.gg/7CavmBrw" target="_blank" class="discord-btn-nav">Discord</a></li>
+            <li><a href="https://discord.gg/7CavmBrw" target="_blank" class="discord-btn-nav">Join Discord</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>JET — Powering Editors & Creators</h1>
-            <p class="subtitle">Elevate your FiveM and SA-MP experience with custom skins, vehicles, and cinematic scenes. Professionally developed and performance-optimized.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300a8ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='4' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Ctext x='50' y='200' font-family='Arial, sans-serif' font-size='180' font-weight='900' fill='url(%23grad2)' style='font-style: italic;' filter='url(%23glow)'%3EJETT%3C/text%3E%3Cpath d='M 80 230 Q 300 210 520 230' stroke='url(%23grad2)' stroke-width='12' fill='none' stroke-linecap='round' filter='url(%23glow)'/%3E%3Ccircle cx='100' cy='50' r='4' fill='%2300d4ff' opacity='0.6'/%3E%3Ccircle cx='650' cy='80' r='4' fill='%2300d4ff' opacity='0.6'/%3E%3Ccircle cx='720' cy='150' r='3' fill='%2300a8ff' opacity='0.4'/%3E%3C/svg%3E" alt="JETT" class="hero-logo">
+            <h1>Professional Video Editing<br>& Thumbnail Design</h1>
+            <p class="subtitle">We connect <span class="hero-highlight">skilled editors</span> with clients who need high-quality <span class="hero-highlight">VFX, GFX, and editing services</span>. Transform your content into visual masterpieces.</p>
             <div class="cta-buttons">
-                <a href="https://discord.gg/7CavmBrw" target="_blank" class="btn btn-primary">Join Discord</a>
-                <a href="#services" class="btn btn-secondary">View Services</a>
+                <a href="https://discord.gg/7CavmBrw" target="_blank" class="btn btn-primary">
+                    <span>💬</span>
+                    Get Started
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <span>🎬</span>
+                    Explore Services
+                </a>
             </div>
         </div>
     </section>
@@ -424,11 +565,11 @@
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
-                <h2>500+</h2>
-                <p>Custom Models</p>
+                <h2>1000+</h2>
+                <p>Videos Edited</p>
             </div>
             <div class="stat-item">
-                <h2>100+</h2>
+                <h2>500+</h2>
                 <p>Happy Clients</p>
             </div>
             <div class="stat-item">
@@ -445,82 +586,84 @@
     <section id="services" class="services">
         <div class="services-container">
             <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional editing solutions tailored to your needs</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">👤</div>
-                    <h3>Custom Skins</h3>
-                    <p>Professional character skins tailored to your server's theme and requirements.</p>
-                    <ul class="service-features">
-                        <li>High-quality textures</li>
-                        <li>Optimized for performance</li>
-                        <li>Custom animations support</li>
-                        <li>Multiple variations available</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>Custom Vehicles</h3>
-                    <p>Unique vehicle models from scratch or modifications of existing ones.</p>
-                    <ul class="service-features">
-                        <li>Original designs</li>
-                        <li>Performance optimized</li>
-                        <li>Custom handling support</li>
-                        <li>Livery customization</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
                     <div class="service-icon">🎬</div>
-                    <h3>Cinematic Scenes</h3>
-                    <p>Professional video production for server trailers and promotional content.</p>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing for YouTube, social media, commercials, and more. We bring your vision to life with precision and creativity.</p>
                     <ul class="service-features">
-                        <li>Script writing</li>
-                        <li>Camera work & editing</li>
-                        <li>Custom effects</li>
-                        <li>Music & sound design</li>
+                        <li>Color grading & correction</li>
+                        <li>Audio mixing & mastering</li>
+                        <li>Smooth transitions & cuts</li>
+                        <li>Fast turnaround times</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Thumbnail Design</h3>
+                    <p>Eye-catching thumbnails that boost click-through rates. Custom designs that make your content stand out in crowded feeds.</p>
+                    <ul class="service-features">
+                        <li>High-conversion designs</li>
+                        <li>Platform-optimized formats</li>
+                        <li>Unlimited revisions</li>
+                        <li>Brand-consistent styling</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>VFX & GFX</h3>
+                    <p>Stunning visual effects and motion graphics that elevate your content. From simple animations to complex compositing.</p>
+                    <ul class="service-features">
+                        <li>Motion graphics</li>
+                        <li>3D animations</li>
+                        <li>Special effects</li>
+                        <li>Custom animations</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
+    <section id="why-us" class="portfolio">
         <div class="portfolio-container">
-            <h2 class="section-title">Why Choose Us?</h2>
+            <h2 class="section-title">Why Choose JETT Studios?</h2>
+            <p class="section-subtitle">We're more than just editors—we're your creative partners</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
-                    <h3>Fast Delivery</h3>
-                    <p>Quick turnaround times without compromising on quality. Most projects completed within 3-7 days.</p>
+                    <h3>Lightning Fast</h3>
+                    <p>Quick turnaround times without sacrificing quality. Most projects are completed within 24-48 hours, perfect for content creators with tight schedules.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">💎</div>
                     <h3>Premium Quality</h3>
-                    <p>Industry-standard modeling and texturing techniques ensure your content stands out from the crowd.</p>
+                    <p>Industry-standard tools and techniques ensure your content looks professional and polished. We use the latest software and workflows.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Full Support</h3>
-                    <p>Ongoing support and revisions to ensure your complete satisfaction with the final product.</p>
+                    <div class="service-icon">🤝</div>
+                    <h3>Dedicated Support</h3>
+                    <p>24/7 customer support and unlimited revisions. We work closely with you until you're 100% satisfied with the final result.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="cta-section">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Join our Discord server to discuss your requirements and get a custom quote</p>
+        <h2>Ready to Elevate Your Content?</h2>
+        <p>Join our Discord server to connect with our talented editors and get a custom quote for your project</p>
         <a href="https://discord.gg/7CavmBrw" target="_blank" class="btn-discord">
             <span>💬</span>
-            Join Our Discord Server
+            Join Our Discord Community
         </a>
     </section>
 
     <footer>
-        <p>&copy; 2026 JET Customs Studio. All rights reserved.</p>
+        <p>&copy; 2026 JETT Studios. All rights reserved.</p>
     </footer>
 </body>
 </html>
